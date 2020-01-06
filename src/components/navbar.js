@@ -16,7 +16,7 @@ const MediNavbar = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
+    <div className="navbar">
       <Navbar color="light" light expand="md">
         <NavbarBrand href="/">Meditations App</NavbarBrand>
         <NavbarToggler onClick={toggle} />

@@ -1,0 +1,11 @@
+{
+	"apiPath": "/api",
+	"rules": {
+		"sse": {
+			"visitor": "get"
+		},
+		"login": {
+			"visitor": "post get"
+		}
+	}
+}

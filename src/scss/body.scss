@@ -2,10 +2,19 @@
 	box-sizing: border-box;
 }
 
-body {
-	background: #1cb149;
-	background: -moz-linear-gradient(left, #27b346 0%, #c4f3a4 50%, #27b346 100%);
-	background: -webkit-linear-gradient(left, #27b346 0%, #c4f3a4 50%, #27b346 100%);
-	background: linear-gradient(to right, #27b346 0%, #c4f3a4 50%, #27b346 100%);
-	color: rgb(251, 249, 249) !important;
+// body {
+// 	background-image: url('../images/carouselPic4.jpg');
+
+// }
+.homePageBackgroundShow {
+	height: 30vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: 0.5s;
+	opacity: 1;
 }
