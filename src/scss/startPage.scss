@@ -1,0 +1,38 @@
+.startHeader {
+	background: url('../images/startHeader.jpg');
+	background-size: cover;
+	padding: 8rem;
+
+	.title {
+		font-size: 2rem;
+		margin-top: 2rem;
+	}
+	h1 {
+		font-size: 25px;
+	}
+	h2 {
+		margin: 1rem 0 1rem 0 !important;
+		color: white;
+		font-size: 20px;
+	}
+}
+
+.container2 {
+	max-width: 960px;
+	margin: 0 auto;
+	background: #f9f9f9;
+	padding: 25px;
+}
+.background1 {
+	background: url('../images/startPageBackground1.jpg') no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 500px;
+}
+
+.background2 {
+	background: url('../images/startPageBackground2.jpg') no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 500px;
+}

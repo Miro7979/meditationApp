@@ -1,0 +1,41 @@
+.helpPageHeader {
+	background: url('../images/helpPageHeader2.jpg');
+	background-size: cover;
+	padding: 8rem;
+
+	.title {
+		font-size: 2rem;
+		margin-top: 2rem;
+	}
+	h1 {
+		background-size: 2rem;
+		font-size: 25px;
+		color: white;
+	}
+	h2 {
+		margin: 1rem 0 1rem 0 !important;
+		color: white;
+		font-size: 20px;
+	}
+}
+
+.helpPageBackground1 {
+	background: url('../images/helpPageBackground1.jpg') no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 500px;
+}
+
+.helpPageBackground2 {
+	background: url('../images/helpPageBackground2.jpg') no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 500px;
+}
+
+.helpPageBackground3 {
+	background: url('../images/helpPageBackground3.jpg') no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 500px;
+}
