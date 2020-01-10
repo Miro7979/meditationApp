@@ -1,12 +1,9 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-let meditationSchema = new Schema({
-  name: String,
-  image: String,
-  text: String,
-  video: String,
-  date: { type: Date, default: Date.now },
+const articlesSchema = new Schema({
+  title: String,
+  body: String,
   startPageArticle1: String,
   startPageArticle2: String,
   startPageArticle3: String,
@@ -19,6 +16,6 @@ let meditationSchema = new Schema({
   helpPageStep4: String,
   helpPageStep5: String,
   aboutUsPageArticle: String
-})
+});
 
-module.exports = mongoose.model('Meditation', meditationSchema);
+module.exports = Articles = mongoose.model('Article', articlesSchema);

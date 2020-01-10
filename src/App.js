@@ -2,9 +2,8 @@ import React, { useState, useContext } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Context from './components/context';
 import Navbar from './components/navbar';
-
 import StartPage from './components/startPage';
-import Meditations from './components/meditations';
+import Meditations from './components/meditationsPage';
 import AboutUs from './components/aboutUs';
 import Help from './components/help';
 import Footer from './components/footer';

@@ -7,6 +7,8 @@ const connectMongo = require('connect-mongo')(session);
 const Meditation = require('./models/Meditation');
 const salt = 'meditationaregood'; // unique secret
 
+const articles = require('./routes/api/articles');
+const meditations = require('./routes/api/meditations');
 
 // connect to MongoDB via Mongoose
 mongoose.connect('mongodb://localhost/meditation', {
@@ -14,6 +16,18 @@ mongoose.connect('mongodb://localhost/meditation', {
   useUnifiedTopology: true,
   useCreateIndex: true
 });
+
+const db = mongoose.connection;
+
+// check connection
+db.once('open', () => {
+  console.log('Connected to MongoDB')
+});
+
+// Check for DB errors
+db.on('error', (err) => {
+  console.log(err)
+})
 
 app.use(session({
   secret: salt, // a unique secret
@@ -27,28 +41,31 @@ app.use(session({
 
 app.use(express.json())
 // connect acl middleware
-const acl = require('./acl');
-const aclRules = require('./acl-rules.json');
-app.use(acl(aclRules));
+// const acl = require('./acl');
+// const aclRules = require('./acl-rules.json');
+// app.use(acl(aclRules));
 
-const theRest = require('the.rest');
-const pathToModelFolder = path.join(__dirname, 'models');
-app.use(theRest(express, '/api', pathToModelFolder));
+// const theRest = require('the.rest');
+// const pathToModelFolder = path.join(__dirname, 'models');
+// app.use(theRest(express, '/api', pathToModelFolder));
 
 
 
+
+
+
+
+
+// app.get('/api/meditations', async (req, res) => {
+//   let meditations = await Meditation.find();
+//   res.json(meditations);
+// });
 
 
 const models = {
-  Meditations: require('./models/Meditation')
+  Meditations: require('./models/Meditation'),
+  Articles: require('./models/Articles')
 };
-
-
-
-app.get('/api/meditations', async (req, res) => {
-  let meditations = await Meditation.find();
-  res.json(meditations);
-});
 // A route that returns all books from Mongo
 /* app.get('/json/makronutrients', async (req, res) => {
     let makronutrients = await Makronutrient.find();
@@ -93,7 +110,10 @@ app.get('/api/meditations', async (req, res) => {
 //   res.json(recipes);
 // });
 
+// Use routes
+app.use('/api/articles', articles);
+app.use('/api/meditations', meditations);
 
-app.use(express.static('client/build'));
+// app.use(express.static('client/build'));
 // Start the web server
 app.listen(3001, () => console.log('Listening on port 3001'));
