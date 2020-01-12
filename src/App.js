@@ -23,16 +23,14 @@ function App() {
             <header className="App-header">
               <Navbar />
             </header>
-            <div className="main">
-              <main className="container mt-2">
-                <Switch className="switch">
-                  <Route exact path="/" component={StartPage} />
-                  <Route path="/meditationer" component={Meditations} />
-                  <Route path="/tipsOchRådSida" component={Help} />
-                  <Route path="/omOssSida" component={AboutUs} />
-                </Switch>
-              </main>
-            </div>
+
+            <Switch className="switch">
+              <Route exact path="/" component={StartPage} />
+              <Route path="/meditationer" component={Meditations} />
+              <Route path="/tipsOchRådSida" component={Help} />
+              <Route path="/omOssSida" component={AboutUs} />
+            </Switch>
+
           </div>
           <Footer />
         </div>

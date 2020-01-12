@@ -5,7 +5,6 @@
 	background-position: center center;
 	padding-top: 60px;
 	padding-bottom: 60px;
-	width: auto;
 
 	.title {
 		font-size: 2rem;
@@ -27,10 +26,6 @@
 	margin-top: 10px;
 }
 
-.toMeditationBtn {
-	margin-top: 10px;
-}
-
 .player-wrapper {
 	position: relative;
 	padding-top: 56.25%;
@@ -42,15 +37,15 @@
 	top: 0;
 	left: 0;
 }
+
 @media all and (max-width: 800px) and (min-width: 300px) {
 	.meditationPageHeader {
 		background: url('../images/mediPageHeader.jpg');
-		background-size: cover;
+		background-size: 100%;
 		background-repeat: no-repeat;
 		background-position: center center;
-		padding-top: 40px;
-		padding-bottom: 40px;
-		width: auto;
+		padding-top: 20px;
+		padding-bottom: 20px;
 
 		.title {
 			font-size: 2rem;

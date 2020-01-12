@@ -44,10 +44,16 @@ const Footer = (props) => {
               </div>
             </Row>
           </div>
-          <div className="footer-bottom">
-            &copy; meditationsapp.se | Design - Miro
         </div>
-        </div>
+      </Container>
+      <Container className="themed-container" fluid={true}>
+        <Row>
+          <Col>
+            <div className="footer-bottom">
+              &copy; meditationsapp.se | Design - Miro
+            </div>
+          </Col>
+        </Row>
       </Container>
 
     </React.Fragment>

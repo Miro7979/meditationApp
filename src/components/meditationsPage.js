@@ -36,6 +36,7 @@ const MeditationCard = (props) => {
 
   return (
     <React.Fragment>
+
       <section className="meditationPageHeader">
         <div className="header-body">
           <div className="container">
@@ -46,8 +47,10 @@ const MeditationCard = (props) => {
           </div>
         </div>
       </section>
-      <Row>
-        <Col sm={{ size: 8, offset: 2 }}>
+
+
+      <Row className="mr-0 ml-0">
+        <Col md={{ size: 6, offset: 3 }}>
           {(meditations.map(meditations => {
             return (
               <div className="meditationCard" key={uuid()}>
