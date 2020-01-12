@@ -1,7 +1,11 @@
 .meditationPageHeader {
 	background: url('../images/mediPageHeader.jpg');
-	background-size: cover;
-	padding: 8rem;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	width: auto;
 
 	.title {
 		font-size: 2rem;
@@ -37,4 +41,30 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+}
+@media all and (max-width: 800px) and (min-width: 300px) {
+	.meditationPageHeader {
+		background: url('../images/mediPageHeader.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		width: auto;
+
+		.title {
+			font-size: 2rem;
+			margin-top: 2rem;
+		}
+		h1 {
+			background-size: 2rem;
+			font-size: 25px;
+			color: rgb(8, 8, 8);
+		}
+		h2 {
+			margin: 1rem 0 1rem 0 !important;
+			color: rgb(7, 7, 7);
+			font-size: 20px;
+		}
+	}
 }

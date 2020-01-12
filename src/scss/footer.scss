@@ -3,7 +3,10 @@
 	color: #d3d3d3;
 	height: 400px;
 	position: relative;
+	left: 0;
+	bottom: 0;
 	width: 100%;
+	background-color: #303036;
 }
 .footer .footer-content {
 	height: 350px;
@@ -105,6 +108,9 @@
 	border-radius: 0.25rem;
 	float: left;
 }
+.themed-container {
+	background-color: #303036;
+}
 
 @media all and (max-width: 800px) and (min-width: 300px) {
 	.footer {
@@ -176,43 +182,6 @@
 		margin-left: 15px;
 		transition: all 0.3s;
 	}
-	// .footer .footer-content .contact-form .contact-input {
-	// 	display: block;
-	// 	background: #272727;
-	// 	color: #bebdbd;
-	// 	margin-bottom: 10px;
-	// 	line-height: 1.5rem;
-	// 	padding: 0.9rem 1.4rem;
-	// 	border: none;
-	// }
-	// .footer .footer-content .contact-form .contact-input:focus {
-	// 	background: #1a1a1a;
-	// }
-
-	// .btn {
-	// 	padding: 0.5rem 1rem;
-	// 	background: #006669;
-	// 	color: white;
-	// 	border: 1px solid transparent;
-	// 	border-radius: 0.25rem;
-	// }
-	// .btn:hover {
-	// 	color: white !important;
-	// 	background: #005255;
-	// }
-	// .btn-big {
-	// 	padding: 0.7rem 1.3rem;
-	// 	line-height: 1.3rem;
-	// }
-	// .footer .footer-content .contact-form .contact-btn {
-	// 	margin-top: 5px;
-	// 	padding: 0.5rem 1rem;
-	// 	background: #006669;
-	// 	color: white;
-	// 	border: 1px solid transparent;
-	// 	border-radius: 0.25rem;
-	// 	float: left;
-	// }
 }
 @media all and (max-width: 1025px) and (min-width: 300px) {
 	.footer {
@@ -220,7 +189,6 @@
 		color: #d3d3d3;
 		height: 600px;
 		position: relative;
-		// width: 100%;
 	}
 	.footer .footer-content {
 		height: 550px;

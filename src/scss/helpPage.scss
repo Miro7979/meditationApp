@@ -1,7 +1,10 @@
 .helpPageHeader {
 	background: url('../images/helpPageHeader2.jpg');
-	background-size: cover;
-	padding: 8rem;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding-top: 60px;
+	padding-bottom: 60px;
 
 	.title {
 		font-size: 2rem;
@@ -10,11 +13,11 @@
 	h1 {
 		background-size: 2rem;
 		font-size: 25px;
-		color: white;
+		color: rgb(5, 5, 5);
 	}
 	h2 {
 		margin: 1rem 0 1rem 0 !important;
-		color: white;
+		color: rgb(5, 5, 5);
 		font-size: 20px;
 	}
 }
@@ -28,7 +31,7 @@
 
 .helpPageBackground2 {
 	background: url('../images/helpPageBackground2.jpg') no-repeat center;
-	background-size: cover;
+	background-size: 70%;
 	background-attachment: fixed;
 	height: 500px;
 }
@@ -38,4 +41,21 @@
 	background-size: cover;
 	background-attachment: fixed;
 	height: 500px;
+}
+
+@media all and (max-width: 800px) and (min-width: 300px) {
+	.helpPageBackground2 {
+		background: url('../images/helpPageBackground2.jpg') no-repeat center;
+		background-size: cover;
+		background-attachment: fixed;
+		height: 500px;
+	}
+	.helpPageHeader {
+		background: url('../images/helpPageHeader2.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
 }

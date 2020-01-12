@@ -35,7 +35,7 @@ function StartPage() {
           </div>
         </div>
       </section>
-      <div className="container2">
+      <div className="container">
         {(articles.map(articles => {
           return (
             <div key={uuid()}>

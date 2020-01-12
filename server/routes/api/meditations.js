@@ -19,20 +19,7 @@ router.post('/', (req, res) => {
     name: req.body.name,
     text: req.body.text,
     image: req.body.image,
-    video: req.body.video,
-    startPageArticle1: req.body.startPageArticle1,
-    startPageArticle2: req.body.startPageArticle2,
-    startPageArticle3: req.body.startPageArticle3,
-    helpPageArticle1: req.body.helpPageArticle1,
-    helpPageArticle2: req.body.helpPageArticle2,
-    helpPageArticle3: req.body.helpPageArticle3,
-    helpPageStep1: req.body.helpPageStep1,
-    helpPageStep2: req.body.helpPageStep2,
-    helpPageStep3: req.body.helpPageStep3,
-    helpPageStep4: req.body.helpPageStep4,
-    helpPageStep5: req.body.helpPageStep5,
-    aboutUsPageArticle: req.body.aboutUsPageArticle
-
+    video: req.body.video
   });
   newMeditation.save().then(meditation => res.json(meditation));
 });

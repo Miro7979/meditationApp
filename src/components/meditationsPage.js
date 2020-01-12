@@ -46,19 +46,16 @@ const MeditationCard = (props) => {
           </div>
         </div>
       </section>
-
       <Row>
         <Col sm={{ size: 8, offset: 2 }}>
           {(meditations.map(meditations => {
             return (
               <div className="meditationCard" key={uuid()}>
                 <Card>
-                  <CardImg top width="100%" src={require("../images/" + meditations.image)} alt="Card image cap" />
+                  <CardImg top width={'50%'} src={require("../images/" + meditations.image)} alt="Card image cap" />
                   <CardBody>
                     <CardTitle>{meditations.name}</CardTitle>
                     <CardSubtitle> {meditations.text} </CardSubtitle>
-
-
                     <div className="player-wrapper">
                       <ReactPlayer className="react-player"
                         url={meditations.video} controls={true}
@@ -66,20 +63,12 @@ const MeditationCard = (props) => {
                         height="100%"
                       />
                     </div>
-
                   </CardBody>
                 </Card>
                 <div>
-
-
-
-
-
-
-
                 </div>
               </div>
-            )
+            );
           }))}
         </Col>
       </Row>

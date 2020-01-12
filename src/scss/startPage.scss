@@ -1,7 +1,10 @@
 .startHeader {
 	background: url('../images/startHeader.jpg');
-	background-size: cover;
-	padding: 8rem;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding-top: 60px;
+	padding-bottom: 60px;
 
 	.title {
 		font-size: 2rem;
@@ -9,11 +12,13 @@
 	}
 	h1 {
 		font-size: 25px;
+		padding-left: 30px;
 	}
 	h2 {
 		margin: 1rem 0 1rem 0 !important;
 		color: white;
 		font-size: 20px;
+		padding-left: 30px;
 	}
 }
 
@@ -25,14 +30,54 @@
 }
 .background1 {
 	background: url('../images/startPageBackground1.jpg') no-repeat center;
-	background-size: cover;
+
+	background-position: center center;
 	background-attachment: fixed;
 	height: 500px;
 }
 
 .background2 {
 	background: url('../images/startPageBackground2.jpg') no-repeat center;
-	background-size: cover;
+
+	background-position: center center;
 	background-attachment: fixed;
 	height: 500px;
+}
+
+@media all and (max-width: 800px) and (min-width: 300px) {
+	.background1 {
+		background: url('../images/startPageBackground1.jpg');
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed;
+	}
+
+	.background2 {
+		background: url('../images/startPageBackground2.jpg');
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed;
+	}
+	.startHeader {
+		background: url('../images/startHeader.jpg');
+		background-repeat: no-repeat;
+		background-size: auto;
+		background-position: center center;
+		padding-top: 40px;
+		padding-bottom: 40px;
+
+		.title {
+			font-size: 2rem;
+			margin-top: 2rem;
+		}
+		h1 {
+			font-size: 25px;
+		}
+		h2 {
+			margin: 1rem 0 1rem 0 !important;
+			color: white;
+			font-size: 20px;
+			padding-bottom: 20px;
+		}
+	}
 }

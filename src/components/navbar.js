@@ -17,7 +17,7 @@ const MediNavbar = (props) => {
 
   return (
     <div className="navbar">
-      <Navbar color="light" light expand="md">
+      <Navbar color="dark" dark expand="md">
         <NavbarBrand href="/">Meditations App</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>

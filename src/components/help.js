@@ -21,7 +21,7 @@ function Help() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [])
   let heading = 'Tips och råd';
-  let subHeading = 'Här kan du få tips och råd om du kan på bästa sätt meditera och komma igång';
+  let subHeading = 'Här kan du få tips och råd om hur du kan på bästa sätt meditera och komma igång';
 
   return (
     <React.Fragment>
@@ -35,11 +35,11 @@ function Help() {
           </div>
         </div>
       </section>
-      <div className="container2">
+      <div className="container">
         {(articles.map(articles => {
           return (
             <div key={uuid()}>
-              <h4 className="body-h4">Effekterna av meditation</h4>
+              <h4 className="body-h4 mt-4">Effekterna av meditation</h4>
               <div className="helpPageBackground1">
               </div>
               <br></br>

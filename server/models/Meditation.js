@@ -6,19 +6,7 @@ let meditationSchema = new Schema({
   image: String,
   text: String,
   video: String,
-  date: { type: Date, default: Date.now },
-  startPageArticle1: String,
-  startPageArticle2: String,
-  startPageArticle3: String,
-  helpPageArticle1: String,
-  helpPageArticle2: String,
-  helpPageArticle3: String,
-  helpPageStep1: String,
-  helpPageStep2: String,
-  helpPageStep3: String,
-  helpPageStep4: String,
-  helpPageStep5: String,
-  aboutUsPageArticle: String
+  date: { type: Date, default: Date.now }
 })
 
 module.exports = mongoose.model('Meditation', meditationSchema);
