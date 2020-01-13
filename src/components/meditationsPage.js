@@ -36,7 +36,6 @@ const MeditationCard = (props) => {
 
   return (
     <React.Fragment>
-
       <section className="meditationPageHeader">
         <div className="header-body">
           <div className="container">
@@ -47,8 +46,6 @@ const MeditationCard = (props) => {
           </div>
         </div>
       </section>
-
-
       <Row className="mr-0 ml-0">
         <Col md={{ size: 6, offset: 3 }}>
           {(meditations.map(meditations => {
@@ -57,7 +54,7 @@ const MeditationCard = (props) => {
                 <Card>
                   <CardImg top width={'50%'} src={require("../images/" + meditations.image)} alt="Card image cap" />
                   <CardBody>
-                    <CardTitle>{meditations.name}</CardTitle>
+                    <CardTitle className="cardTitle">{meditations.name}</CardTitle>
                     <CardSubtitle> {meditations.text} </CardSubtitle>
                     <div className="player-wrapper">
                       <ReactPlayer className="react-player"

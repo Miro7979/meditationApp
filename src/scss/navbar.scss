@@ -1,10 +1,12 @@
 .navbar {
+	position: fixed;
 	width: 100%;
 	padding: none;
 	background-color: #343a40;
 }
 a.navbar-brand {
 	padding-left: 20px;
+	font-family: 'Comfortaa', cursive;
 }
 // .navbar-light .navbar-brand {
 // 	color: white;
