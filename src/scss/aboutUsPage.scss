@@ -1,0 +1,46 @@
+.aboutUsPageHeader {
+	background: url('../images/aboutUsPageHeader.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding-top: 60px;
+	padding-bottom: 60px;
+
+	.title {
+		font-size: 2rem;
+		margin-top: 2rem;
+	}
+	h1 {
+		background-size: 2rem;
+		font-size: 25px;
+		color: white;
+		font-family: 'Comfortaa', cursive;
+	}
+	h2 {
+		margin: 1rem 0 1rem 0 !important;
+		color: white;
+		font-size: 20px;
+		font-family: 'Comfortaa', cursive;
+	}
+}
+.aboutUsText {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	width: 100%;
+}
+@media all and (max-width: 800px) and (min-width: 300px) {
+	.aboutUsPageHeader {
+		background: url('../images/aboutUsPageHeader.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	.aboutUsText {
+		margin-top: 40px;
+		margin-bottom: 35px;
+		width: 90%;
+		padding-left: 15px;
+	}
+}

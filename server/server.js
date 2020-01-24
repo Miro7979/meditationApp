@@ -1,76 +1,54 @@
 const express = require('express');
+const path = require('path');
+const app = express();
+const session = require('express-session');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-// const session = require('express-session');
-// const connectMongo = require('connect-mongo')(session);
-// const app = express();
-// const CreateRestRoutes = require('./CreateRestRoutes');
+const connectMongo = require('connect-mongo')(session);
+const Meditations = require('./models/Meditation');
+const salt = 'meditationaregood'; // unique secret
 
-// Connect to db
-let dbName = "Meditations";
-mongoose.connect(`mongodb://localhost/${dbName}`);
-global.db = mongoose.connection;
-db.on('error', () => console.log('Could not connect to DB'));
+const articles = require('./routes/api/articles');
+const meditations = require('./routes/api/meditations');
+
+// connect to MongoDB via Mongoose
+mongoose.connect('mongodb://localhost/meditation', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true
+});
+
+const db = mongoose.connection;
+
+// check connection
 db.once('open', () => {
-  console.log('Connected to DB');
-  startWebServer();
+  console.log('Connected to MongoDB')
+});
+
+// Check for DB errors
+db.on('error', (err) => {
+  console.log(err)
 })
 
+app.use(session({
+  secret: salt, // a unique secret
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false }, // true on htttps server
+  store: new connectMongo({ mongooseConnection: mongoose.connection })
+}));
+
+app.use(express.json())
+
+const models = {
+  Meditations: require('./models/Meditation'),
+  Articles: require('./models/Articles')
+};
 
 
-
-function startWebServer() {
-
-  // Create a web server
-  const app = express();
-
-  app.use(bodyParser.json());
-
-  // A route that returns all books from Mongo
-  /* app.get('/json/makronutrients', async (req, res) => {
-      let makronutrients = await Makronutrient.find();
-      res.json(makronutrients);
-    });*/
-  // const models = {
-  //     Makronutrients: require('./models/Makronutrient.js'),
-  //     Recipes: require('./models/Recipe.js'),
-  //     Uploads: require('./models/Upload.js'),
-  //     Scrapes: require('./models/Scrape.js')
-  // };
-
-  // create all necessary rest routes for the models
-  // new CreateRestRoutes(app, global.db, models);
+// Use routes
+app.use('/api/articles', articles);
+app.use('/api/meditations', meditations);
 
 
-  // A route that returns all makronutrients from Mongo
-  // app.get('/json/makronutrients', async (req, res) => {
-  //   let makronutrients = await Makronutrient.find();
-  //   res.json(makronutrients);
-  // });
-
-  // A route that returns all recipes from Mongo
-  // app.get('/json/recipezs', async (req, res) => {
-  //   let recipes = await Recipe.find();
-  //   res.json(recipes);
-  // });
-
-  // app.get('/json/recipezs/:partialRecipe', async (req, res) => {
-  //   const regExpression = new RegExp(req.params.partialRecipe, "i");
-  //   let recipes = await Recipe.find({ name: regExpression }).catch((err) => {
-  //     res.json({ error: err });
-  //   });
-  //   res.json(recipes);
-  // });
-
-  // app.get('/json/recipeswiththiscategorys/:partialCategory', async (req, res) => {
-  //   const regExpression = new RegExp(req.params.partialCategory, "i");
-  //   let recipes = await Recipe.find({ category: regExpression }).catch((err) => {
-  //     res.json({ error: err});
-  //   });
-  //   res.json(recipes);
-  // });
-
-
-  // Start the web server
-  app.listen(3001, () => console.log('Listening on port 3001'));
-}
+// Start the web server
+app.listen(3001, () => console.log('Listening on port 3001'));
