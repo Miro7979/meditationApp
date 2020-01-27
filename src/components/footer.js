@@ -19,8 +19,8 @@ const Footer = (props) => {
                       Vi hjälper dig med detta.
                      </p>
                     <div className="contact">
-                      <span><i className="fas fa-phone"></i> &nbsp; 010 123 123</span>
-                      <span><i className="fas fa-envelope"></i> &nbsp; info@meditationsapp.se</span>
+                      <span><i className="fas fa-phone"></i> &nbsp; <a href="tel:004610123123">010 123 123</a></span>
+                      <span><i className="fas fa-envelope"></i> &nbsp; <a href="mailto:info@meditationsapp.se">info@mediatationsapp.se</a></span>
                     </div>
                     <div className="socials">
                       <a href="https://sv-se.facebook.com"><i className="fab fa-facebook"></i></a>
